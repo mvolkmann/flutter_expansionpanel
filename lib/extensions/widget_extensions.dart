@@ -78,6 +78,23 @@ extension WidgetExtension on Widget {
     return Padding(child: this, padding: EdgeInsets.all(size));
   }
 
+  Widget paddingOnly({
+    double top = 0,
+    double right = 0,
+    double bottom = 0,
+    double left = 0,
+  }) {
+    return Padding(
+      child: this,
+      padding: EdgeInsets.only(
+        top: top,
+        right: right,
+        bottom: bottom,
+        left: left,
+      ),
+    );
+  }
+
   Widget textColor(Color color) {
     return DefaultTextStyle(style: TextStyle(color: color), child: this);
   }
